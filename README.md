@@ -14,6 +14,16 @@ As the sun rose, it was clear – something had to change.
 
 That's when **Binge Watchman for YouTube** was created. It helps you track time spent on YouTube across all open tabs. No more losing track!
 
+
+## 🎬 Demo
+
+| ![Step 1](first.png) | ![Step 2](second.png) | ![Step 3](third.png) |
+|:--------------------:|:---------------------:|:--------------------:|
+| **Step 1**: I'm watching a YT video, and it shows the total time here. | **Step 2**: Classic YouTube temptation! Got sidetracked by another video and, as usual, opened it in a new tab to watch later. | **Step 3**: The Watchman has detected the total time. |
+
+
+
+
 ## 🚀 Features
 
 - **Real-time Tracking**: Tracks the total watch time for YouTube videos across all open tabs.
