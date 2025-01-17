@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Binge Watchman for YouTube",
+    "version": "1.0",
+    "description": "Track the total duration of YouTube videos open in tabs.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/watch*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
