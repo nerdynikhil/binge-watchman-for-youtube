@@ -45,7 +45,7 @@ We welcome contributions to improve this extension!
 
 ## 🙏 Acknowledgments
 
-- Special thanks to **ChatGPT** for assisting in the development process.
+Thanks to **Github Copilot** for assisting in the development process.
 
 ---
 
