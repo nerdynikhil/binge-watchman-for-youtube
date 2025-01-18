@@ -5,6 +5,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "VIDEO_DURATION") {
     totalDuration += message.duration;
     chrome.action.setBadgeText({ text: formatTime(totalDuration) });
+    chrome.runtime.sendMessage({ type: "UPDATE_TOTAL_DURATION", totalDuration });
   }
 });
 
