@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('totalTime').textContent = formatTime(message.totalDuration);
     }
   });
+
+  document.getElementById('resetButton').addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: "RESET_DURATION" });
+  });
 });
 
 function formatTime(seconds) {

@@ -2,6 +2,9 @@
 let totalDuration = 0;
 const tabDurations = new Map(); // Track duration for each tab
 
+// Set initial badge color
+chrome.action.setBadgeBackgroundColor({ color: "#666666" });
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "VIDEO_DURATION" && sender.tab) {
     const tabId = sender.tab.id;
@@ -15,7 +18,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     
     // Update badge and popup
     chrome.action.setBadgeText({ text: formatTime(totalDuration) });
-    chrome.runtime.sendMessage({ type: "UPDATE_TOTAL_DURATION", totalDuration });
+  } else if (message.type === "RESET_DURATION") {
+    // Reset all counters
+    totalDuration = 0;
+    tabDurations.clear();
+    
+    // Reset badge to "0:00" instead of empty
+    chrome.action.setBadgeText({ text: "0:00" });
   }
 });
 
